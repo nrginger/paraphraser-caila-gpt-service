@@ -17,6 +17,8 @@ The service relies on the Caila [Python SDK](https://github.com/just-ai/mlp-pyth
 
 Before building a Docker image, insert your account ID and Caila API token in the code.
 
+To create your API token go to *My space* --> *API-tokens* -- *Create token*.
+
 ## Build Docker image
 
 To build the service locally, run `./build.sh` in the project root.
@@ -38,8 +40,7 @@ You will need this URL to configure your service in Caila.
 ## Create Caila service
 
 1. Sign in to [Caila](https://app.caila.io/) or sign up for a new account.
-3. To create your API token go to *My space* --> *API-tokens* -- *Create token*.
-4. Go to *Images* in the sidebar.
+3. Go to *My space* and select *Images* in the sidebar.
     > 🛈 If you don’t see this tab, go to *My space* → *Services*, select *Create service*, and submit a request for access.
     > Our customer support team will get back to you shortly.
 5. Select *Create image*. Provide the image name and the URL you got from the build script.
