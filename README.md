@@ -1,6 +1,6 @@
 # gpt-paraphaser
 
-This repository is a gpt paraphaser service for [Caila](https://app.caila.io/) based on OpenAI models.
+This repository is a gpt paraphaser service for [Caila](https://app.caila.io/) based on OpenAI model available at Caila.
 
 > Caila is a platform for hosting microservices based on ML models.
 > It is a powerful tool that can cover every aspect of your solution’s lifecycle, from model training and QA to deployment and monitoring.
