@@ -1,1 +1,5 @@
 git+https://github.com/just-ai/mlp-python-sdk.git@release
+pydantic
+requests
+fastapi
+uvicorn
