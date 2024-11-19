@@ -49,7 +49,7 @@ You will need this URL to configure your service in Caila.
 8. Select *Add instance*. Wait for the instance to start (the status indicator should turn from yellow to green).
 9. Go to the *Testing* and try sending a request with a JSON body like
 `{
-   "text": "Семь раз отмерь, один раз отреж."
+   "text": "Семь раз отмерь, один раз отрежь."
  }`.
 
 If you see `{
