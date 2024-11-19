@@ -59,7 +59,7 @@ If you see `{
      ....
     "N rephased text."
   ]
-} in the output, congratulations!
+}` in the output, congratulations!
 Your service is up and running.
 
 If you would like to learn more about Caila, check out our official [documentation](https://docs.caila.io/).
