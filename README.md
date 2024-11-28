@@ -57,7 +57,12 @@ You will need this URL to configure your service in Caila.
 
 1. Go to the *Testing* and activate option *Set up service configuration*.
 
-2. Set values for `batch_size` and `diversity` in JSON format. 
+2. Set values for `batch_size` (number of rephrased texts) and `diversity` (temperature) in JSON format.
+
+> ℹ️ Temperature in GPT models is a parameter (from 0 to 2) that controls randomness and creativity of the output:
+      - Low temperature (close to 0) = more focused, deterministic, and conservative responses.
+      - Medium temperature (close to 1) = standard level of creativity.
+      - High temperature (close to 2) = more random, diverse, and creative responses.
     
 3. Try sending a request with a JSON body like
 `{
