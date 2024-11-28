@@ -14,7 +14,7 @@ class RephraseInput(BaseModel):
     texts: str
 
 class RephraseOutput(BaseModel):
-    rephrased_texts: List[str] = []
+    texts_list: List[dict] = []
 
 class RephraseConfig(BaseModel):
     batch_size: int
@@ -81,17 +81,19 @@ class RephraseTask(Task):
 
             if 'chat' in result and 'choices' in result['chat']:
                 rephrased_texts = result['chat']['choices'][0]['message']['content'].strip()
-                # Разбиваем ответ на отдельные строки и формируем список
-                rephrased_texts = [line.strip() for line in rephrased_texts.split('\n') if line.strip()]
-                logger.debug(f"Перефразированный текст: {rephrased_texts}")
-                return RephraseOutput(rephrased_texts=rephrased_texts)
+                rephrased_values = [line.strip() for line in rephrased_texts.split('\n') if line.strip()]
+                output_dict = {
+                    "values": rephrased_values
+                    }
+                logger.debug(f"Перефразированный текст: {output_dict}")
+                return RephraseOutput(texts_list=[output_dict])
             else:
                 logger.error(f"Неожиданная структура ответа: {result}")
-                return RephraseOutput(rephrased_texts=[])
+                return RephraseOutput(texts_list=[])
 
         except requests.exceptions.RequestException as e:
             logger.exception(f"Ошибка во время запроса: {e}")
-            return RephraseOutput(rephrased_texts=[])
+            return RephraseOutput(texts_list=[])
 
 
     @property
